@@ -5,6 +5,9 @@
  */
 package cityofaaron;
 
+import johnson.hymas.model.Condition;
+import johnson.hymas.model.Player;
+
 /**
  *
  * @author lando
@@ -15,7 +18,14 @@ public class CityOfAaron {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setName("Joseph Johnson");
+        
+        String playerOneName = playerOne.getName();
+        
+        System.out.println(playerOne.toString());
+        System.out.println(Condition.Fair);
     }
-    
+
 }
