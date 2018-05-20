@@ -27,14 +27,20 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         Player playerOne = new Player();
+        Location locationOne = new Location();
         
         playerOne.setName("Joseph Johnson");
+        locationOne.setName("Zarahemla");
+        locationOne.setDescription("Place of Many Wonders");
+        locationOne.setMapSymbol("Cool Star");
+        
         
         String playerOneName = playerOne.getName();
         
         System.out.println(playerOne.toString());
         System.out.println(Condition.Fair);
-//        System.out.println(Location.toString());
+        System.out.println(locationOne.toString());
+        
                 
         
     }

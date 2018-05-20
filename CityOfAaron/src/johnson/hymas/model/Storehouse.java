@@ -5,11 +5,13 @@
  */
 package johnson.hymas.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Joejoe
  */
-public class Storehouse {
+public class Storehouse implements Serializable{
  @Override
     public String toString() {
         return "Storehouse{" + '}';
