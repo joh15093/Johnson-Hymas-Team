@@ -23,6 +23,26 @@ public class Animal {
        return null;
     
     }
+    private String string;
+
+    /**
+     * Get the value of string
+     *
+     * @return the value of string
+     */
+    public String getString() {
+        return string;
+    }
+
+    /**
+     * Set the value of string
+     *
+     * @param string new value of string
+     */
+    public void setString(String string) {
+        this.string = string;
+    }
+
     public static Animal getAge() {
         return null;
     }
