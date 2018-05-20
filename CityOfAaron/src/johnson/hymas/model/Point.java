@@ -40,6 +40,10 @@ public class Point {
         
     }
 
+    public Point(String string) {
+        this.string = string;
+    }
+
     public static Point getColumn() {
         return null;
     }
