@@ -24,6 +24,10 @@ public enum ItemType {
     }
     private String string;
 
+    private ItemType(String string) {
+        this.string = string;
+    }
+
     /**
      * Get the value of string
      *
