@@ -6,48 +6,44 @@
 package johnson.hymas.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
  *
  * @author lando
  */
-public class Author implements Serializable{
+public class Map implements Serializable{
     
-    // Class instance Variable
-    private String name;
-    private String title;
+    private Location[][] locations;
+    private Point currectLocation;
 
-    public Author() {
+    public Map() {
+    }
+    
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public String getName() {
-        return name;
+    public Point getCurrectLocation() {
+        return currectLocation;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCurrectLocation(Point currectLocation) {
+        this.currectLocation = currectLocation;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + Objects.hashCode(this.title);
+        int hash = 5;
+        hash = 47 * hash + Arrays.deepHashCode(this.locations);
+        hash = 47 * hash + Objects.hashCode(this.currectLocation);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Author{" + "name=" + name + ", title=" + title + '}';
+        return "Map{" + "locations=" + Arrays.toString(locations) + ", currectLocation=" + currectLocation + '}';
     }
     
     @Override
@@ -61,11 +57,11 @@ public class Author implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Author other = (Author) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        final Map other = (Map) obj;
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
             return false;
         }
-        if (!Objects.equals(this.title, other.title)) {
+        if (!Objects.equals(this.currectLocation, other.currectLocation)) {
             return false;
         }
         return true;

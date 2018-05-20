@@ -6,28 +6,20 @@
 package johnson.hymas.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  *
  * @author lando
  */
-public class Player implements Serializable{
+public class Provision implements Serializable{
     
     private String name;
+    private boolean perishable;
 
-    public Player() {
+    public Provision() {
     }
 
-    public <any> getGames() {
-        return games;
-    }
-
-    public void setGames(<any> games) {
-        this.games = games;
-    }
-    
     public String getName() {
         return name;
     }
@@ -36,16 +28,25 @@ public class Player implements Serializable{
         this.name = name;
     }
 
+    public boolean isPerishable() {
+        return perishable;
+    }
+
+    public void setPerishable(boolean perishable) {
+        this.perishable = perishable;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.name);
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + (this.perishable ? 1 : 0);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "Provision{" + "name=" + name + ", perishable=" + perishable + '}';
     }
 
     @Override
@@ -59,14 +60,15 @@ public class Player implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
+        final Provision other = (Provision) obj;
+        if (this.perishable != other.perishable) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
     }
-    
-    
     
     
     
