@@ -5,6 +5,8 @@
  */
 package johnson.hymas.model;
 
+import java.util.Objects;
+
 /**
  *
  * @author Joejoe
@@ -38,6 +40,28 @@ public class Point {
     public static Point getRow() {
        return null;
         
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + Objects.hashCode(this.string);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Point other = (Point) obj;
+        return true;
     }
 
     public Point(String string) {
