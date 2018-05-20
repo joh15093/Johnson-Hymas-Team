@@ -14,7 +14,7 @@ public class Animal {
     public String toString() {
         return "Animal{" + '}';
     }
-
+;
     /**
      *
      * @return
@@ -22,6 +22,10 @@ public class Animal {
     public static Animal getName() {
        return null;
     
+    }
+
+    public Animal(String string) {
+        this.string = string;
     }
     private String string;
 
