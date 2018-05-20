@@ -58,13 +58,5 @@ public enum ItemType {
     public static ItemType getProvisions() {
         return provisions;
     }
-
-    public static ItemType gettool() {
-        return tool;
-    }
-
-    public static ItemType getprovisions() {
-        return provisions;
-    }
     
 }
