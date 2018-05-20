@@ -22,6 +22,38 @@ public enum ItemType {
     public static ItemType getanimal() {
         return animal;
     }
+    private String string;
+
+    /**
+     * Get the value of string
+     *
+     * @return the value of string
+     */
+    public String getString() {
+        return string;
+    }
+
+    /**
+     * Set the value of string
+     *
+     * @param string new value of string
+     */
+    public void setString(String string) {
+        this.string = string;
+    }
+
+
+    public static ItemType getAnimal() {
+        return animal;
+    }
+
+    public static ItemType getTool() {
+        return tool;
+    }
+
+    public static ItemType getProvisions() {
+        return provisions;
+    }
 
     public static ItemType gettool() {
         return tool;
