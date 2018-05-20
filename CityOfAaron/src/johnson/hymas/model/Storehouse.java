@@ -6,6 +6,7 @@
 package johnson.hymas.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -15,6 +16,28 @@ public class Storehouse implements Serializable{
  @Override
     public String toString() {
         return "Storehouse{" + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 13 * hash + Objects.hashCode(this.string);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Storehouse other = (Storehouse) obj;
+        return true;
     }
 
     public Storehouse(String string) {
