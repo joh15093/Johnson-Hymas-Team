@@ -24,6 +24,11 @@ public enum ItemType {
     }
     private String string;
 
+    /**
+     *
+     * @return
+     */
+    @Override
     public int hashCode() {
         return string.hashCode();
     }
