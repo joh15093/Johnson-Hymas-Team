@@ -24,6 +24,10 @@ public enum ItemType {
     }
     private String string;
 
+    public int hashCode() {
+        return string.hashCode();
+    }
+
     private ItemType(String string) {
         this.string = string;
     }
