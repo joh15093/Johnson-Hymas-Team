@@ -17,6 +17,10 @@ public class Storehouse implements Serializable{
         return "Storehouse{" + '}';
     }
 
+    public Storehouse(String string) {
+        this.string = string;
+    }
+
     public static Storehouse get() {
         return null;
     }
