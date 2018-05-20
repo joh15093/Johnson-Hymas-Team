@@ -29,7 +29,8 @@ public enum ItemType {
      * @return
      */
     
-    @Override
+   
+    
     public int hashCode() {
         return string.hashCode();
     }
