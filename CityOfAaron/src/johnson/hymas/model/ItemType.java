@@ -30,7 +30,7 @@ public enum ItemType {
      */
     
    
-    
+   
     public int hashCode() {
         return string.hashCode();
     }
