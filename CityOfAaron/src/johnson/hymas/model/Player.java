@@ -6,7 +6,6 @@
 package johnson.hymas.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -19,15 +18,7 @@ public class Player implements Serializable{
 
     public Player() {
     }
-
-    public <any> getGames() {
-        return games;
-    }
-
-    public void setGames(<any> games) {
-        this.games = games;
-    }
-    
+   
     public String getName() {
         return name;
     }
