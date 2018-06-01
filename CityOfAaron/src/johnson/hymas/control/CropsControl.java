@@ -32,8 +32,6 @@ public class CropsControl {
      * @return 
      */
     public static double calcBushelsHarvested(double tithes, double acresOwned){
-        //tithes = 10;
-        //acresOwned = 100;
         Random bushels = new Random();
         double bushelsHarvested = 0;
         double bushelsPerAcre = 0;
@@ -51,6 +49,17 @@ public class CropsControl {
         bushelsHarvested = bushelsPerAcre * acresOwned;
     return bushelsHarvested;
     }
+    public static double calcBushelsToTithes(double tithes) {
+        return 0;
+    }    
+    public static double calcBushelsToRats(double tithes) {
+        return 0;
+    }    
+    public static double calcTotalBushels(double tithes) {
+        return 0;
+    }
+    
+    
     
 }
 
