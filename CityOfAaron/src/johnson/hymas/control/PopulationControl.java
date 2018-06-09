@@ -31,6 +31,33 @@ public class PopulationControl {
      * Calculate the number of people that came to the city
      *  The number of people that came to the city will be a random number 
      *      between 1-5%
-     * 
      */
- }
+    /**
+     * peopleFed
+     * 
+     * @param bushelsToPopulation
+     * @return 
+     */
+    public static double calcPeopleFed(double bushelsToPopulation) {
+        return 0;
+        
+    }
+    public static double calcPeopleStarved(double peopleFed) {
+        return 0;
+        
+    }
+    /** 
+     * 1. Determine how much to grow the population (a random number between 1% 
+     *      and 5%).
+    * 2. Calculate the number of people who moved into the city.
+    * 3. Save this value.
+    * 4. Add this number to the current population
+    * 5. Save the updated value of the current population.
+     * @return 
+     */
+    public static double calcpopulationIncrease(){
+        return 0;
+        
+    }
+          
+    }

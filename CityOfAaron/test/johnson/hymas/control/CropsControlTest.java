@@ -26,16 +26,12 @@ public class CropsControlTest {
         assertEquals(expResult, result, 0.0);
         
     }
+   
     
-    /**
-     * This is the test for case number 1
-     *      Tithes should be 10% (10)
-     *      Acres should be 1000
-    */
     @Test
     public void testCase1() {
         double result = CropsControl.calcBushelsHarvested(10, 100);
-        assertEquals(300.0, result, 0.0);
+        assertEquals(400.0, result, 0.0);
     }
     @Test
     public void testCase2() {
@@ -50,16 +46,16 @@ public class CropsControlTest {
     @Test
     public void testCase4() {
         double result = CropsControl.calcBushelsHarvested(10, 150);
-        assertEquals(450.0, result, 0.0);
+        assertEquals(900.0, result, 0.0);
     }
     @Test
     public void testCase5() {
         double result = CropsControl.calcBushelsHarvested(10, 100);
-        assertEquals(300.0, result, 0.0);
+        assertEquals(400.0, result, 0.0);
     }
     @Test
     public void testCase6() {
         double result = CropsControl.calcBushelsHarvested(10, 1000);
-        assertEquals(500.0, result, 0.0);
+        assertEquals(2000.0, result, 0.0);
     }
 }
