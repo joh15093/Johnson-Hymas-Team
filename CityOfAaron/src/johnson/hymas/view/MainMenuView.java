@@ -20,9 +20,14 @@ public class MainMenuView {
     /**
      * Constructor
      */
-    public NewGameView(){
+    public MainMenuView(){
         
-        message = "Starting a new game...\n\n";
+        message = "Main Menu\n"
+                + "---------\n"
+                + "N - Start a New Game\n"
+                + "L - Load a Saved Game\n"
+                + "H - Help Menu\n"
+                + "Q - Quit\n";
                 
     }
     
@@ -104,7 +109,7 @@ public class MainMenuView {
                 helpMenu();
                 break;
             case "Q":
-                System.out.println("Thank you for playing");
+                System.out.println("Thank you for playing. Good-bye");
                 return false;
         }
         
@@ -138,7 +143,8 @@ public class MainMenuView {
     }
     
     private void helpMenu(){
-        System.out.println("*** helpMenu() called. You must implement he HelpMenu this week.");
+        HelpMenuView viewHelp = new HelpMenuView();
+        viewHelp.displayView();
     }
     
     private void loadSavedGame(){

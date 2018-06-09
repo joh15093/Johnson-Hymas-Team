@@ -5,8 +5,13 @@
  */
 package cityofaaron;
 
-import johnson.hymas.model.Map;
-import johnson.hymas.view.StartNewGameView;
+import johnson.hymas.model.Game;
+import johnson.hymas.view.NewGameView;
+import johnson.hymas.view.HelpMenuView;
+import johnson.hymas.view.MainMenuView;
+import johnson.hymas.view.StartProgramView;
+
+
 
 
 /**
@@ -15,16 +20,27 @@ import johnson.hymas.view.StartNewGameView;
  */
 public class CityOfAaron {
 
+     // Copy in main Class
+    public static Game currentGame = null;
+     
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game game) {
+        currentGame = game;
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        StartNewGameView newGame = new StartNewGameView();
         
-        System.out.println(newGame.toString());
-        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayView();
                 
         
     }
+    
+   
 
 }

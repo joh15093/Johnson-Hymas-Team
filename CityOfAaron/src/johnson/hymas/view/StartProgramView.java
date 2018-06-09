@@ -25,10 +25,10 @@ public class StartProgramView {
                 + "\n"
                 + "You have been chosen to lead the people of Aaron through \n"
                 + "managing their resources. You will need to feed your people,\n"
-                + " pay tithes to the Lord, and buy and sell land to build \n"
+                + "pay tithes to the Lord, and buy and sell land to build \n"
                 + "prosperity among your people. If you fail to manage your wheat \n"
                 + "correctly your people will starve, your wheat will diminish\n"
-                + " and you will be removed from office. Manage your resources \n"
+                + "and you will be removed from office. Manage your resources \n"
                 + "correctly and you will prosper, and will be known as King \n"
                 + "Benjamin is known, a holy man who did reign over his people \n"
                 + "in righteousness.\n";
@@ -123,15 +123,17 @@ public class StartProgramView {
     }
     
     private void startMainMenuView(){
-        // Pause for a few seconds
+        // Pause for a couple seconds
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch(InterruptedException exception){
         //ignoring for now
         }
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayView();
+        
+        
     }
 }
 
