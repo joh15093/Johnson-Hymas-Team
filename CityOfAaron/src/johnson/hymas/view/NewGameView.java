@@ -8,7 +8,7 @@ import johnson.hymas.model.Player;
 
 /**
  *
- * @author kanderson
+ * @author lando
  */
 public class NewGameView {
     

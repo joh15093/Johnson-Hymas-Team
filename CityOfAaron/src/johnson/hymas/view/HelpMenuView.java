@@ -7,7 +7,7 @@ import johnson.hymas.view.MainMenuView;
 
 /**
  *
- * @author lando
+ * @author joseph
  */
 public class  HelpMenuView{
     
