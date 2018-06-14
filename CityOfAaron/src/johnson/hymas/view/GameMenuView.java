@@ -1,17 +1,16 @@
-
 package johnson.hymas.view;
 
 import cityofaaron.CityOfAaron;
-import java.util.Scanner;
-import johnson.hymas.model.Game;
 import johnson.hymas.model.Player;
+import johnson.hymas.model.Game;
+import java.util.Scanner;
+
 
 /**
  *
  * @author lando
  */
-public class NewGameView {
-    
+public class GameMenuView {
     
     /**
      * The message that will be displayed by this view.
@@ -21,17 +20,24 @@ public class NewGameView {
     /**
      * Constructor
      */
-    public NewGameView(){
+    public GameMenuView(){
         
-        message = "Starting New Game...\n";
-                
+        message = "Game Menu\n"
+                + "---------\n"
+                + "V - View the Map\n"
+                + "L - Move to a new location\n"
+                + "C - Manage Crops\n"
+                + "Y - Live the year\n"
+                + "R - Reports Menu\n"
+                + "M - Return Main Menu";                
     }
-    
     
     /**
      * Get the user's input. Keep prompting them until they enter a value.
+     * 
      * @param prompt
-     * @param allowEmpty - determine whether the user can enter no value (just a return key)
+     * @param allowEmpty - determine whether the user can enter no value (just a 
+     *                   return key)
      * @return 
      */
     protected String getUserInput(String prompt, boolean allowEmpty){
@@ -78,11 +84,8 @@ public class NewGameView {
      */
     public String[] getInputs() {
         
-        // Declare the array to have the number of elements you intend to get 
-        // from the user.
         String[] inputs = new String[1];
-        
-        inputs[0] = getUserInput("Please enter your name or press 'Enter' to return to the Main Menu:", true);
+        inputs[0] = getUserInput("Your choice:");
         
         return inputs;
     }
@@ -95,17 +98,31 @@ public class NewGameView {
      * should exit and return to the previous view.
      */
     public boolean doAction(String[] inputs){
-
-        if (inputs[0] == null || inputs[0].equals("")) {
-            System.out.println("No player name entered, Returning to the Main Menu...");
-            return false;
+        
+        switch (inputs[0].trim().toUpperCase()) {
+            case "V":
+                viewMap();
+                break;
+            case "L":
+                moveLocation();
+                break;
+            case "C":
+                manageCrops();
+                break;
+            case "Y":
+                liveYear();
+                break;
+            case "R":
+                showReports();
+                break;
+            case "M":
+                return false;
+            default:
+                System.out.println("Invalid Option: Please select a valid option");
+                displayView();
         }
         
-        String playerName = inputs[0];
-        createAndStartGame(playerName);
-        
-        // False will stop us from looping
-        return false;
+        return true;
     }
     
     
@@ -125,36 +142,25 @@ public class NewGameView {
         }
     }
     
-    
-    // Define your action handlers here. These are the methods that your doAction()
-    // method will call based on the user's input. We don't want to do a lot of 
-    // complex game stuff in our doAction() method. It will get messy very quickly.
-    
-    
-    private boolean someActionHandler(){
-        // Define whatever code you need here to accomplish the action.
-        // You can make this a void method if you want. Whatever you need 
-        // here, you are free to do.
-        //
-        // Generally, though, this is where you will call into your Control
-        // classes to do the work of the application.
-        
-        return true;
+    private void liveYear() {
+        System.out.println("liveYear Function Called and coming soon, returning to Game Menu");
     }
 
-    private void createAndStartGame(String playerName) {
-        // This will all be worked on later
-        
-        Player player = new Player();
-        player.setName(playerName);
-        
-        Game game = new Game();
-        game.setThePlayer(player);
-        
-        CityOfAaron.setCurrentGame(game);
-    
-        System.out.println("Welcome to the game, " + CityOfAaron.getCurrentGame().getThePlayer().getName() + "!\n");
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayView();
+    private void viewMap() {
+        ShowMapView viewMap = new ShowMapView();
+        viewMap.displayView();
+    }
+
+    private void moveLocation() {
+        System.out.println("MoveLocation Function Called and coming soon, returning to Game Menu");
+    }
+
+    private void manageCrops() {
+        System.out.println("manageCrops Function Called and coming soon, returning to Game Menu");
+    }
+
+    private void showReports() {
+        System.out.println("showReports Function Called and coming soon, returning to Game Menu");
     }
 }
+

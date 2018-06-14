@@ -1,16 +1,13 @@
 
 package johnson.hymas.view;
 
-import cityofaaron.CityOfAaron;
 import java.util.Scanner;
-import johnson.hymas.model.Game;
-import johnson.hymas.model.Player;
 
 /**
  *
  * @author lando
  */
-public class NewGameView {
+public class ShowMapView {
     
     
     /**
@@ -21,10 +18,15 @@ public class NewGameView {
     /**
      * Constructor
      */
-    public NewGameView(){
+    public ShowMapView(){
         
-        message = "Starting New Game...\n";
-                
+        message = "City of Aaron Map\n" 
+                + "-----------------\n"
+                + "-  River  -  -  -\n"
+                + "-  -  -  WheatField  -\n"
+                + "Temple  -  -  -  -\n"
+                + "-  -  -  -  The Village\n"
+                + "The Storehouse  -  -  -  -\n";
     }
     
     
@@ -78,37 +80,11 @@ public class NewGameView {
      */
     public String[] getInputs() {
         
-        // Declare the array to have the number of elements you intend to get 
-        // from the user.
-        String[] inputs = new String[1];
-        
-        inputs[0] = getUserInput("Please enter your name or press 'Enter' to return to the Main Menu:", true);
-        
-        return inputs;
+    // The purpose of this class is to display the description
+    // This class does not get input
+        return null;
     }
-    
-    
-    /**
-     * Perform the action indicated by the user's input.
-     * @param inputs
-     * @return true if the view should repeat itself, and false if the view
-     * should exit and return to the previous view.
-     */
-    public boolean doAction(String[] inputs){
-
-        if (inputs[0] == null || inputs[0].equals("")) {
-            System.out.println("No player name entered, Returning to the Main Menu...");
-            return false;
-        }
         
-        String playerName = inputs[0];
-        createAndStartGame(playerName);
-        
-        // False will stop us from looping
-        return false;
-    }
-    
-    
     /**
      * Control this view's display/prompt/action loop until the user
      * chooses and action that causes this view to close.
@@ -131,30 +107,16 @@ public class NewGameView {
     // complex game stuff in our doAction() method. It will get messy very quickly.
     
     
-    private boolean someActionHandler(){
-        // Define whatever code you need here to accomplish the action.
-        // You can make this a void method if you want. Whatever you need 
-        // here, you are free to do.
-        //
+    public boolean doAction(String[] inputs){
+         
         // Generally, though, this is where you will call into your Control
         // classes to do the work of the application.
+//        startMainMenuView();
         
-        return true;
+        // This will stop this method from being called again
+        return false;
     }
-
-    private void createAndStartGame(String playerName) {
-        // This will all be worked on later
-        
-        Player player = new Player();
-        player.setName(playerName);
-        
-        Game game = new Game();
-        game.setThePlayer(player);
-        
-        CityOfAaron.setCurrentGame(game);
     
-        System.out.println("Welcome to the game, " + CityOfAaron.getCurrentGame().getThePlayer().getName() + "!\n");
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayView();
-    }
+
 }
+
