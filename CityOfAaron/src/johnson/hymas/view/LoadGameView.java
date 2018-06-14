@@ -20,13 +20,13 @@ public class LoadGameView {
      */
     public LoadGameView(){
         
-        message = "City of Aaron Map\n" 
+        message = "City of Aaron\n" 
                 + "-----------------\n"
-                + "-  River  -  -  -\n"
-                + "-  -  -  WheatField  -\n"
-                + "Temple  -  -  -  -\n"
-                + "-  -  -  -  The Village\n"
-                + "The Storehouse  -  -  -  -\n";
+                + "-  Authors  -  -  -\n"
+                + "-  -  -  Animals  -\n"
+                + "Tools  -  -  -  -\n"
+                + "-  -  -  -  Provisions\n"
+                + "------------------\n";
     }
     
     
