@@ -3,6 +3,7 @@ package johnson.hymas.view;
 
 import static java.lang.Thread.sleep;
 import java.util.Scanner;
+import static johnson.hymas.view.ViewBase.pause;
 
 /**
  *
@@ -20,8 +21,11 @@ public class StartProgramView {
      * Constructor
      */
     public StartProgramView(){
-        
-        message = "Welcome to the City of Aaron\n"
+       super();
+    }
+    
+    protected String getMessage() {       
+        return "Welcome to the City of Aaron.\n"
                 + "\n"
                 + "You have been chosen to lead the people of Aaron through \n"
                 + "managing their resources. You will need to feed your people,\n"
@@ -124,12 +128,7 @@ public class StartProgramView {
     
     private void startMainMenuView(){
         // Pause for a couple seconds
-        try {
-            Thread.sleep(2000);
-        } catch(InterruptedException exception){
-        //ignoring for now
-        }
-        
+        pause(2000);        
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayView();
         

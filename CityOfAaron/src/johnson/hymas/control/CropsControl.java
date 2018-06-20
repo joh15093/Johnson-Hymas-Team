@@ -12,21 +12,6 @@ package johnson.hymas.control;
 import java.util.Random;
 public class CropsControl {
     /**
-     * Calculate the amount of bushels harvested in the given year
-     *      - Must know the amount of acres owned
-     *      - Must know the percentage of tithing given
-     * 
-     * Calculate the amount of bushels given to tithing
-     *      - Must know the amount of bushels given to tithing
-     * 
-     * Calculate the total amount of bushels in storehouse
-     *      - Add bushels harvested that year
-     *      - Subtract bushels given to population
-     *      - Subtract bushels given to tithes
-     *      - Subtract bushels eaten by rats 
-     *
-     * 
-     * Calculate the amount of bushels eaten by rats
      * @param tithes
      * @param acresOwned
      * @return 

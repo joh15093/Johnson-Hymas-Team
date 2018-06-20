@@ -55,7 +55,7 @@ public class CropsControlTest {
     }
     @Test
     public void testCase6() {
-        double result = CropsControl.calcBushelsHarvested(10, 1000);
-        assertEquals(2000.0, result, 0.0);
+        double result = CropsControl.calcBushelsHarvested(15, 100);
+        assertEquals(1000.0, result, 0.0);
     }
 }

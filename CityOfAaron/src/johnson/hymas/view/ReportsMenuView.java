@@ -115,7 +115,6 @@ public class ReportsMenuView {
                 return false;
             default:
                 System.out.println("Invalid Option: Please select a valid option");
-                displayView();
         }
         
         return true;
