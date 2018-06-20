@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author lando
  */
 public class GameControlTest {
-    
+
     public GameControlTest() {
     }
 
@@ -22,5 +22,5 @@ public class GameControlTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }

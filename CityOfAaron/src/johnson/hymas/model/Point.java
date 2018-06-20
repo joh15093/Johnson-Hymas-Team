@@ -12,7 +12,8 @@ import java.util.Objects;
  * @author Joejoe
  */
 public class Point {
-   @Override
+
+    @Override
     public String toString() {
         return "Point{" + '}';
     }
@@ -38,8 +39,8 @@ public class Point {
     }
 
     public static Point getRow() {
-       return null;
-        
+        return null;
+
     }
 
     @Override
@@ -72,6 +73,4 @@ public class Point {
         return null;
     }
 
-    
-    
- } 
+}

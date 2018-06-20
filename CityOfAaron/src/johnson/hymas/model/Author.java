@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class Author implements Serializable{
-    
+public class Author implements Serializable {
+
     // Class instance Variable
     private String name;
     private String title;
@@ -49,7 +49,7 @@ public class Author implements Serializable{
     public String toString() {
         return "Author{" + "name=" + name + ", title=" + title + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -70,7 +70,5 @@ public class Author implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

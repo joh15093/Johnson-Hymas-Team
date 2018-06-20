@@ -10,5 +10,5 @@ package johnson.hymas.control;
  * @author lando
  */
 public class InventoryControl {
-    
+
 }

@@ -12,8 +12,9 @@ import java.util.Objects;
  *
  * @author Joejoe
  */
-public class Storehouse implements Serializable{
- @Override
+public class Storehouse implements Serializable {
+
+    @Override
     public String toString() {
         return "Storehouse{" + '}';
     }
@@ -67,19 +68,15 @@ public class Storehouse implements Serializable{
         this.string = string;
     }
 
-
     /**
      *
      * @return
      */
-    
-   /* public static Storehouse get()*/
-    
+    /* public static Storehouse get()*/
     /**
      *
      */
     public static void getItem() {
     }
-    
-}   
 
+}

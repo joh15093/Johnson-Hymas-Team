@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author lando
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     private Player thePlayer;
     private Map theMap;
     private Storehouse theStorehouse;
@@ -76,7 +76,5 @@ public class Game implements Serializable{
     public void setCurrentYear(int currentYear) {
         this.currentYear = currentYear;
     }
-    
-    
-    
+
 }

@@ -13,8 +13,8 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     private String name;
     private String description;
     private String mapSymbol;
@@ -69,7 +69,7 @@ public class Location implements Serializable{
     public String toString() {
         return "Location{" + "name=" + name + ", description=" + description + ", mapSymbol=" + mapSymbol + ", gameTips=" + Arrays.toString(gameTips) + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -96,7 +96,5 @@ public class Location implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

@@ -12,18 +12,20 @@ import java.util.Objects;
  * @author Joejoe
  */
 public class Animal {
-  @Override
+
+    @Override
     public String toString() {
         return "Animal{" + '}';
     }
-;
+
+    ;
     /**
      *
      * @return
      */
     public static Animal getName() {
-       return null;
-    
+        return null;
+
     }
 
     @Override
@@ -75,12 +77,4 @@ public class Animal {
         return null;
     }
 
-
 }
-
-
-
-
-    
-
-

@@ -30,5 +30,5 @@ public enum ItemType {
     public static ItemType getProvisions() {
         return provisions;
     }
-    
+
 }

@@ -12,15 +12,15 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class InventoryItem implements Serializable{
-    
+public class InventoryItem implements Serializable {
+
     private ItemType itemType;
     private int quantity;
     private Condition condition;
 
     public InventoryItem() {
-    }    
-    
+    }
+
     public ItemType getItemType() {
         return itemType;
     }
@@ -58,7 +58,7 @@ public class InventoryItem implements Serializable{
     public String toString() {
         return "InventoryItem{" + "itemType=" + itemType + ", quantity=" + quantity + ", condition=" + condition + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -82,5 +82,5 @@ public class InventoryItem implements Serializable{
         }
         return true;
     }
-     
+
 }

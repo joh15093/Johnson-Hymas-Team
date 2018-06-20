@@ -26,7 +26,6 @@ public abstract class ViewBase implements View {
      *
      * @return
      */
-
     protected abstract String[] getInputs();
 
     /**

@@ -30,5 +30,5 @@ public enum Condition {
     public static Condition getPoor() {
         return Poor;
     }
-    
+
 }

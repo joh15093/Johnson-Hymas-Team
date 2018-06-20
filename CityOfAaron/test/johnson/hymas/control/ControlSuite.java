@@ -15,5 +15,5 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({johnson.hymas.control.CropsControlTest.class, johnson.hymas.control.LocationControlTest.class, johnson.hymas.control.PopulationControlTest.class, johnson.hymas.control.GameControlTest.class, johnson.hymas.control.LandControlTest.class, johnson.hymas.control.InventoryControlTest.class})
 public class ControlSuite {
-    
+
 }

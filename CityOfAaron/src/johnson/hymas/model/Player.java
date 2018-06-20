@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     private String name;
 
     public Player() {
     }
-   
+
     public String getName() {
         return name;
     }
@@ -56,11 +56,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
-    
+
 }

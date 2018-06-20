@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class Provision implements Serializable{
-    
+public class Provision implements Serializable {
+
     private String name;
     private boolean perishable;
 
@@ -69,9 +69,5 @@ public class Provision implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
+
 }

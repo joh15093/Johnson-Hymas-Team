@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author joseph
  */
-public class HelpMenuView{
+public class HelpMenuView {
 
     /**
      * The message that will be displayed by this view.

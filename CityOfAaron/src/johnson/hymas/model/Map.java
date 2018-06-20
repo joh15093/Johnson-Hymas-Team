@@ -13,14 +13,14 @@ import java.util.Objects;
  *
  * @author lando
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     private Location[][] locations;
     private Point currectLocation;
 
     public Map() {
     }
-    
+
     public Location[][] getLocations() {
         return locations;
     }
@@ -45,7 +45,7 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "locations=" + Arrays.toString(locations) + ", currectLocation=" + currectLocation + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -66,7 +66,5 @@ public class Map implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }
