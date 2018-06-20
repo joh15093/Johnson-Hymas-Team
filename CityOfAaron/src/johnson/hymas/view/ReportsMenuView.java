@@ -1,8 +1,5 @@
 package johnson.hymas.view;
 
-import cityofaaron.CityOfAaron;
-import johnson.hymas.model.Player;
-import johnson.hymas.model.Game;
 import java.util.Scanner;
 
 /**
