@@ -8,13 +8,13 @@ import java.util.Scanner;
  * @author lando
  */
 public class ReportsMenuView extends ViewBase {
-public abstract class ReportsMenu implements View { 
+ 
    
 
     /**
      * Constructor
      */
-    public ReportsMenu(){
+    public ReportsMenuView(){
        
     }
 
