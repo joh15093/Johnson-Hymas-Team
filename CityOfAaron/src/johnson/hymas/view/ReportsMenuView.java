@@ -20,7 +20,8 @@ public class ReportsMenuView extends ViewBase {
 
     @Override
     protected String getMessage(){
-        
+        return null;
+     
     }
 
     
