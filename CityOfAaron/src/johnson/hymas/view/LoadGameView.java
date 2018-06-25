@@ -7,9 +7,11 @@ import java.util.Scanner;
  * @author lando
  */
 public class LoadGameView extends ViewBase{
+public abstract class LoadGame implements View 
+ 
 
- @Override
- protected String getMessage(){
+@Override
+protected String getMessage(){
      return "Loading Game...";
  }
     /**
