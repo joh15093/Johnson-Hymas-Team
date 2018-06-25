@@ -17,6 +17,7 @@ public class LoadGameView extends ViewBase{
      *
      * @return
      */
+    @Override 
     public String[] getInputs() {
 
         // The purpose of this class is to display the description
@@ -25,6 +26,7 @@ public class LoadGameView extends ViewBase{
     }
 
     // complex game stuff in our doAction() method. It will get messy very quickly.
+    @Override
     public boolean doAction(String[] inputs) {
 
         // Generally, though, this is where you will call into your Control
