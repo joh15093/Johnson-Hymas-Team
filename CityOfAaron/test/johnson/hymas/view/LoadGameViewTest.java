@@ -20,16 +20,16 @@ public class LoadGameViewTest {
     
     public LoadGameViewTest() {
     }
-    
+    /**/
     @BeforeClass
     public static void setUpClass() {
     }
-    
-    @AfterClass
+    /*
+    @AfterClass*/
     public static void tearDownClass() {
     }
     
-    @Before
+    /*@Before*/
     public void setUp() {
     }
     
