@@ -1,6 +1,7 @@
 package johnson.hymas.view;
 
 import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeJava.type;
 
 /**
  *
@@ -26,6 +27,18 @@ protected String getMessage(){
         // This class does not get input
         return null;
     }
+for (type var : array);
+static {
+    statements using var;
+}   
+// for-each loop
+@SuppressWarnings("empty-statement")
+class For_Each     
+{
+    public static void main(String[] abstract);
+    
+    
+}
 
     // complex game stuff in our doAction() method. It will get messy very quickly.
     @Override
