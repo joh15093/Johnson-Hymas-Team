@@ -17,22 +17,24 @@ import static org.junit.Assert.*;
  * @author Kristy
  */
 public class LoadGameViewTest {
-    
+
     public LoadGameViewTest() {
     }
+
     /**/
     @BeforeClass
     public static void setUpClass() {
     }
+
     /*
     @AfterClass*/
     public static void tearDownClass() {
     }
-    
+
     /*@Before*/
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -79,5 +81,5 @@ public class LoadGameViewTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }

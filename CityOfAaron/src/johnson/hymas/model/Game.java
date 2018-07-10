@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class Game implements Serializable {
 
     private Player thePlayer;
+    private InventoryItem[] inventory;
     private Map theMap;
     private Storehouse theStorehouse;
     private int currentPopulation;
@@ -27,6 +28,14 @@ public class Game implements Serializable {
 
     public void setThePlayer(Player thePlayer) {
         this.thePlayer = thePlayer;
+    }
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
     }
 
     public Map getTheMap() {

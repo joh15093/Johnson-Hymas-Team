@@ -1,6 +1,7 @@
 package johnson.hymas.view;
 
 import cityofaaron.CityOfAaron;
+import johnson.hymas.control.GameControl;
 import johnson.hymas.model.Game;
 import johnson.hymas.model.Player;
 
@@ -61,13 +62,8 @@ public class NewGameView extends ViewBase {
 
         Player player = new Player();
         player.setName(playerName);
+        GameControl.createNewGame(player);
 
-        Game game = new Game();
-        game.setThePlayer(player);
-
-        CityOfAaron.setCurrentGame(game);
-
-        pause(2000);
         System.out.println("Welcome to the game, " + CityOfAaron.getCurrentGame().getThePlayer().getName() + "!\n");
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayView();

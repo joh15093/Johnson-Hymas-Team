@@ -1,5 +1,7 @@
 package johnson.hymas.view;
 
+import johnson.hymas.control.GameControl;
+
 /**
  *
  * @author lando

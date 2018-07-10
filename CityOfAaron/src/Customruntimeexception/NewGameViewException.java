@@ -13,5 +13,5 @@ public class NewGameViewException {
 
     public NewGameViewException() {
     }
-  
+
 }

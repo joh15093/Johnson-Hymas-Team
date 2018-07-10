@@ -2,29 +2,24 @@ package johnson.hymas.view;
 
 import java.util.Scanner;
 
-
 /**
  *
  * @author lando
  */
 public class ReportsMenuView extends ViewBase {
- 
-   
 
     /**
      * Constructor
      */
-    public ReportsMenuView(){
-       
+    public ReportsMenuView() {
+
     }
 
     @Override
-    protected String getMessage(){
+    protected String getMessage() {
         return null;
-     
-    }
 
-    
+    }
 
     /**
      * Get the set of inputs from the user.
@@ -71,8 +66,6 @@ public class ReportsMenuView extends ViewBase {
 
         return true;
     }
-
-    
 
     private void showReports() {
         System.out.println("showReports Function Called and coming soon, returning to Game Menu");

@@ -13,5 +13,5 @@ public class InventoryControlException {
 
     public InventoryControlException() {
     }
-    
+
 }

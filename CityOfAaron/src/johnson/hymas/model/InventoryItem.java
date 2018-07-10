@@ -21,6 +21,12 @@ public class InventoryItem implements Serializable {
     public InventoryItem() {
     }
 
+    public InventoryItem(ItemType itemType, int quantity, Condition condition) {
+        setItemType(itemType);
+        setQuantity(quantity);
+        setCondition(condition);
+    }
+
     public ItemType getItemType() {
         return itemType;
     }
