@@ -20,6 +20,8 @@ import johnson.hymas.model.Location;
  */
 public class GameControl {
 
+    private static Object items;
+
     public static int createNewGame(Player player) {
         if (player == null) {
             return -1;
@@ -63,10 +65,12 @@ public class GameControl {
         }
         if (items == null || items.length < 1) {
             return null;
+        } else {
         }
 
-        Map map[][] = new Map[numRows][numCol];
+        Map map[][];
         // How do I save the numer of rows and columns inside the map object?
+        map = new Map[numRows][numCol];
 
         Location[][] = createLocations(numRows, numCol);
         // How do I assign this?
@@ -74,5 +78,9 @@ public class GameControl {
         
         System.out.println("Create Map Called..");
         return null;
+    }
+
+    private static void createLocations(int numRows, int numCol) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
