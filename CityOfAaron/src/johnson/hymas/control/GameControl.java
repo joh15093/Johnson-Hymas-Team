@@ -51,6 +51,12 @@ public class GameControl {
         return null;
     }
 
+    /**
+     *
+     * @param numRows
+     * @param numCol
+     * @return
+     */
     public static Map createMap(int numRows, int numCol) {
         if (numRows < 0 || numCol < 0) {
             return null;
