@@ -20,8 +20,6 @@ import johnson.hymas.model.Location;
  */
 public class GameControl {
 
-    private static Object items;
-
     public static int createNewGame(Player player) {
         if (player == null) {
             return -1;
@@ -63,9 +61,9 @@ public class GameControl {
         if (numRows < 0 || numCol < 0) {
             return null;
         }
-        if (items == null || items.length < 1) {
-            return null;
+        if (items != null && items.length >= 1) {
         } else {
+            return null;
         }
 
         Map map[][];
