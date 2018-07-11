@@ -51,7 +51,7 @@ public class GameControl {
         return null;
     }
 
-    public static Map createMap(int numRows, int numCol, InventoryItem[] items) {
+    public static Map createMap(int numRows, int numCol) {
         if (numRows < 0 || numCol < 0) {
             return null;
         }
