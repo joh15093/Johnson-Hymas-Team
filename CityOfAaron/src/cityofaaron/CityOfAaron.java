@@ -5,7 +5,6 @@
  */
 package cityofaaron;
 
-import johnson.hymas.control.GameControl;
 import johnson.hymas.model.Game;
 import johnson.hymas.view.StartProgramView;
 import johnson.hymas.view.View;
