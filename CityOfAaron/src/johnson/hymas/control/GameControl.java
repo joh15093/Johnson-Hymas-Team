@@ -80,5 +80,8 @@ public class GameControl {
 
     private static void createLocations(int numRows, int numCol) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void SaveGame (Game game, String filePath)  {
+        print "saveGame () in GameControl class"
+    }    
     }
 }
