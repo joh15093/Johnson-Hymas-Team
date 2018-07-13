@@ -6,6 +6,7 @@
 package cityofaaron;
 
 import johnson.hymas.model.Game;
+import johnson.hymas.model.Player;
 import johnson.hymas.view.StartProgramView;
 import johnson.hymas.view.View;
 
@@ -51,7 +52,7 @@ public class CityOfAaron {
     }
     
     // Copy in main Class
-    public static Game currentGame = null;
+    public static Game getCurrentGame = null;
     
     public static Game getCurrentGame() {
         return currentGame;
