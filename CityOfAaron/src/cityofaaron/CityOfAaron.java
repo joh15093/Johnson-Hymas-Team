@@ -87,8 +87,15 @@ public class CityOfAaron {
                 e.printStackTrace();;
         }
         finally {
-            CityOfAaron.inFile.close();
-            CityOfAaron.outFile.close();
+            try {
+                if (CityOfAaron.inFile != null)
+                    CityOfAaron.inFile.close();
+                
+                if (CityOfAaron.outFile != null)
+                    CityOfAaron.outFile.close();
+        } catch (IOException ex) {
+            System.out.println("Error closing files");
+            return;
         }
 
     }
