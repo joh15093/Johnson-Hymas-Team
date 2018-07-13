@@ -22,7 +22,14 @@ public class Location implements Serializable {
 
     public Location() {
     }
-
+    
+    public Location(String mapSymbol, String name, String description, String[] gameTips){
+        setName(name);
+        setDescription(description);
+        setMapSymbol(mapSymbol);
+        setGameTips(gameTips);
+    }
+    
     public String getName() {
         return name;
     }

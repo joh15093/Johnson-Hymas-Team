@@ -21,12 +21,13 @@ public class Map implements Serializable {
     public Map() {
     }
 
-    private static Location[][] createLocations(int rows, int columns) {
-        return null;
-    }
-
+    
     public Location[][] getLocations() {
         return locations;
+    }
+    
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
 
     public Point getCurrectLocation() {

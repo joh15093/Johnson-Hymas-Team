@@ -1,6 +1,8 @@
 package johnson.hymas.view;
 
 import java.util.Scanner;
+import cityofaaron.CityOfAaron;
+import johnson.hymas.model.Location;
 
 /**
  *
@@ -10,13 +12,7 @@ public class ShowMapView extends ViewBase {
 
     @Override
     protected String getMessage() {
-        return "City of Aaron Map\n"
-                + "-----------------\n"
-                + "-  River  -  -  -\n"
-                + "-  -  -  WheatField  -\n"
-                + "Temple  -  -  -  -\n"
-                + "-  -  -  -  The Village\n"
-                + "The Storehouse  -  -  -  -\n";
+        return null;
     }
 
     /**
@@ -36,10 +32,15 @@ public class ShowMapView extends ViewBase {
     @Override
     public boolean doAction(String[] inputs) {
 
-        // Generally, though, this is where you will call into your Control
-        // classes to do the work of the application.
-//        startMainMenuView();
-        // This will stop this method from being called again
+        Location[][] locations = CityOfAaron.getCurrentGame().getTheMap().getLocations();
+        for (int row = 0; row < locations.length; row++) {
+            for (int col = 0; col < locations[row].length; col++) {
+                System.out.print(locations[row][col].getMapSymbol());
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+
         return false;
     }
 

@@ -9,10 +9,10 @@ import johnson.hymas.model.Game;
 import johnson.hymas.model.Player;
 import johnson.hymas.model.InventoryItem;
 import johnson.hymas.model.Map;
-import static cityofaaron.CityOfAaron.setCurrentGame;
 import johnson.hymas.model.Condition;
 import johnson.hymas.model.ItemType;
 import johnson.hymas.model.Location;
+import cityofaaron.CityOfAaron;
 
 /**
  *
@@ -26,12 +26,12 @@ public class GameControl {
         }
         Game game = new Game();
         game.setThePlayer(player);
-        setCurrentGame(game);
+        CityOfAaron.setCurrentGame(game);
 
         InventoryItem[] items = createItems();
         game.setInventory(items);
 
-        Map map = createMap(5, 5);
+        Map map = createMap();
         if (map == null) {
             return -1;
         }
@@ -51,22 +51,50 @@ public class GameControl {
         return null;
     }
 
-    public static Map createMap(int numRows, int numCol, InventoryItem[] items) {
-        if (numRows < 0 || numCol < 0) {
-            return null;
-        }
-        if (items == null || items.length < 1) {
-            return null;
-        }
+    public static Map createMap() {
 
-        Map map[][] = new Map[numRows][numCol];
-        // How do I save the numer of rows and columns inside the map object?
+        Map map = new Map();
 
-        Location[][] = createLocations(numRows, numCol);
-        // How do I assign this?
+        Location[][] locations = createLocations();
+        map.setLocations(locations);
         
-        
-        System.out.println("Create Map Called..");
-        return null;
+        return map;
+    }
+
+    private static Location[][] createLocations() {
+        String[] tips = {"Tip 1", "Tip 2", "Tip 3"};
+
+        Location[][] locations = new Location[5][5];
+        locations[0][0] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[0][1] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[0][2] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[0][3] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[0][4] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+
+        locations[1][0] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[1][1] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[1][2] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[1][3] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[1][4] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+
+        locations[2][0] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[2][1] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[2][2] = new Location("*", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[2][3] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[2][4] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+
+        locations[3][0] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[3][1] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[3][2] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[3][3] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[3][4] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+
+        locations[4][0] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[4][1] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[4][2] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[4][3] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+        locations[4][4] = new Location("U", "Undeveloped Land", "Undeveloped Land", tips);
+
+        return locations;
     }
 }
