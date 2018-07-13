@@ -10,5 +10,8 @@ package cityofaaron;
  * @author joh15
  */
 class BufferedReader {
+
+    public BufferedReader() {
+    }
     
 }
