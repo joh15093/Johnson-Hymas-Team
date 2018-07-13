@@ -18,15 +18,22 @@ public class CityOfAaron {
 
     private static Game currentGame = null;
     private static Player player = null;
-    
+    private static PrintWriter logFile = null;
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
+    
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
     
     public static PrintWriter getOutFile() {
         return outFile;
         
     }
 
+    public static void setLogFile(PrintWriter logFile) {
+        CityOfAaron.logFile = logFile;
+    }
     public static Player getPlayer() {
         return player;
     }
@@ -68,7 +75,9 @@ public class CityOfAaron {
     public static void main(String[] args) {
 
         try {
-           
+            input = new BufferedReader(new InputSteamReader(System.in));
+            output = new PrintWriter(System.out, true);
+            logFile = new PrintWriter("logFile.txt");
             // open charcter steam files for end user and output
             CityOfAaron.inFile =
                     new BufferedReader(new InputStreamReader(System.in));
@@ -93,6 +102,11 @@ public class CityOfAaron {
                 
                 if (CityOfAaron.outFile != null)
                     CityOfAaron.outFile.close();
+                if (input != null) {
+                }
+                if (logFile != null) {
+                    logFile.close();
+                }
         } catch (IOException ex) {
             System.out.println("Error closing files");
             return;
