@@ -32,8 +32,20 @@ public class MainMenuView extends ViewBase {
      */
     @Override
     public String[] getInputs() {
-
         String[] inputs = new String[1];
+        
+        System.out.println(
+                  "\n"
+                + "\n----------------------------------------------------------"
+                + "\n| Main Menu                                              |"
+                + "\n----------------------------------------------------------"
+                + "\nN - Start new game"
+                + "\nS - Start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nQ - Quit"
+                + "\n----------------------------------------------------------"
+        );
+        
         inputs[0] = getUserInput("Your choice:");
 
         return inputs;
@@ -52,6 +64,9 @@ public class MainMenuView extends ViewBase {
         switch (inputs[0].trim().toUpperCase()) {
             case "N":
                 startNewGame();
+                break;
+            case 'N': // get and start an existing game
+                this.startSavedGame();
                 break;
             case "L":
                 loadSavedGame();
