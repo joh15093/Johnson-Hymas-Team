@@ -57,6 +57,9 @@ public class GameMenuView extends ViewBase {
             case "C":
                 manageCrops();
                 break;
+            case "G" // manageCrops
+                this.saveGame();
+                break;
             case "Y":
                 System.out.println("Living the year...");
                 pause(3000);
@@ -96,5 +99,8 @@ public class GameMenuView extends ViewBase {
 
     private void showReports() {
         System.out.println("showReports Function Called and coming soon, returning to Game Menu");
+        
+    private void saveGame() {
+        SaveGameView saveGameView = new SaveGameView();
+        saveGameView.display();
     }
-}

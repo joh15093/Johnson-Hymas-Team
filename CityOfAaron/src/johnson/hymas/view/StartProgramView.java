@@ -58,7 +58,7 @@ public class StartProgramView extends ViewBase {
     private void startMainMenuView() {
         // Pause for a couple seconds
         pause(2000);
-        View mainMenu = new MainMenuView();
+        MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayView();
     }
 }

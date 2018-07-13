@@ -70,7 +70,7 @@ public abstract class ViewBase implements View {
      */
     protected String getUserInput(String prompt, boolean allowEmpty) {
 
-        Scanner keyboard = new Scanner(System.in);
+        
         String input = "";
         boolean inputReceived = false;
         while (inputReceived == false) {

@@ -57,7 +57,7 @@ public class GameControl {
 
         Location[][] locations = createLocations();
         map.setLocations(locations);
-        
+
         return map;
     }
 
@@ -97,4 +97,11 @@ public class GameControl {
 
         return locations;
     }
+
+    public static void SaveGame(Game game, String filePath) {
+        System.out.print("saveGame () in GameControl class");
+    public static Game saveGame();
+
+}
+}
 }
