@@ -67,8 +67,29 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
 
-        View startProgramView = new StartProgramView();
-        startProgramView.displayView();
+        try {
+           
+            // open charcter steam files for end user and output
+            CityOfAaron.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+            CityOfAaron.outFile = new PrintWriter(System.out, true);
+            
+            // create StartProgramView and start the program
+            StartProgramView StartProgramView = new StartProgramView();
+            StartProgramView.displayView();
+            return;
+            
+        } catch (Throwable e) {
+            
+                System.out.println("Exception: " + e.toString() +
+                                   "\nCause: " + e.getCause () +
+                                   "\nMessage: " + e.getMessage());
+                e.printStackTrace();;
+        }
+        finally {
+            CityOfAaron.inFile.close();
+            CityOfAaron.outFile.close();
+        }
 
     }
 
