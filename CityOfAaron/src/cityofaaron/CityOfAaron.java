@@ -15,9 +15,44 @@ import johnson.hymas.view.View;
  */
 public class CityOfAaron {
 
+    private static Game currentGame = null;
+    private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    public static PrintWriter getOutFile() {
+        return outFile;
+        
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        CityOfAaron.player = player;
+    }
+    
+    public static void setOutFile(PrintWriter outFile) {
+        CityOfAaron.outFile = outFile;
+    }
+    
+    public static BufferedReader getInFile() {
+        return inFile;
+        
+    }
+
+    public CityOfAaron() {
+    }
+    
+    public static void setInFile(BufferedReader inFile) {
+        CityOfAaron.inFile = inFile;
+    }
+    
     // Copy in main Class
     public static Game currentGame = null;
-
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
