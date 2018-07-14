@@ -21,11 +21,10 @@ public class Map implements Serializable {
     public Map() {
     }
 
-    
     public Location[][] getLocations() {
         return locations;
     }
-    
+
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }

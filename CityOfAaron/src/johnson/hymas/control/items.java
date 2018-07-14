@@ -10,5 +10,5 @@ package johnson.hymas.control;
  * @author joh15
  */
 class items {
-    
+
 }

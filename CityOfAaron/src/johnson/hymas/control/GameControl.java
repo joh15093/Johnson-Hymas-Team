@@ -46,8 +46,6 @@ public class GameControl {
         items[0] = new InventoryItem(ItemType.animal, 1, Condition.Good);
         items[1] = new InventoryItem(ItemType.provisions, 1, Condition.Poor);
         items[2] = new InventoryItem(ItemType.tool, 1, Condition.Fair);
-
-        System.out.println("Create Items Called..");
         return null;
     }
 
@@ -100,8 +98,6 @@ public class GameControl {
 
     public static void SaveGame(Game game, String filePath) {
         System.out.print("saveGame () in GameControl class");
-    public static Game saveGame();
 
-}
-}
+    }
 }

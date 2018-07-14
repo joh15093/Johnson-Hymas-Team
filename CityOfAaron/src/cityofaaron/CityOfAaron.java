@@ -5,8 +5,13 @@
  */
 package cityofaaron;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import johnson.hymas.model.Game;
 import johnson.hymas.model.Player;
+import johnson.hymas.view.ErrorView;
 import johnson.hymas.view.StartProgramView;
 import johnson.hymas.view.View;
 
@@ -17,50 +22,13 @@ import johnson.hymas.view.View;
 public class CityOfAaron {
 
     private static Game currentGame = null;
-    private static Player player = null;
     private static PrintWriter logFile = null;
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
-    
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-    
-    public static PrintWriter getOutFile() {
-        return outFile;
-        
-    }
 
-    public static void setLogFile(PrintWriter logFile) {
-        CityOfAaron.logFile = logFile;
-    }
-    public static Player getPlayer() {
-        return player;
-    }
-
-    public static void setPlayer(Player player) {
-        CityOfAaron.player = player;
-    }
-    
-    public static void setOutFile(PrintWriter outFile) {
-        CityOfAaron.outFile = outFile;
-    }
-    
-    public static BufferedReader getInFile() {
-        return inFile;
-        
-    }
-
-    public CityOfAaron() {
-    }
-    
-    public static void setInFile(BufferedReader inFile) {
-        CityOfAaron.inFile = inFile;
-    }
-    
     // Copy in main Class
     public static Game getCurrentGame = null;
-    
+
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -69,49 +37,78 @@ public class CityOfAaron {
         currentGame = game;
     }
 
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        CityOfAaron.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        CityOfAaron.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        CityOfAaron.logFile = logFile;
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
 
         try {
-            input = new BufferedReader(new InputSteamReader(System.in));
-            output = new PrintWriter(System.out, true);
-            logFile = new PrintWriter("logFile.txt");
             // open charcter steam files for end user and output
-            CityOfAaron.inFile =
-                    new BufferedReader(new InputStreamReader(System.in));
-            CityOfAaron.outFile = new PrintWriter(System.out, true);
-            
+            inFile = new BufferedReader(new InputStreamReader(System.in));
+            outFile = new PrintWriter(System.out, true);
+            logFile = new PrintWriter("C:logFile.txt");
+
             // create StartProgramView and start the program
             StartProgramView StartProgramView = new StartProgramView();
             StartProgramView.displayView();
             return;
-            
+
         } catch (Throwable e) {
-            
-                System.out.println("Exception: " + e.toString() +
-                                   "\nCause: " + e.getCause () +
-                                   "\nMessage: " + e.getMessage());
-                e.printStackTrace();;
-        }
-        finally {
+
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage: " + e.getMessage());
+            e.printStackTrace();;
+        } finally {
             try {
-                if (CityOfAaron.inFile != null)
-                    CityOfAaron.inFile.close();
-                
-                if (CityOfAaron.outFile != null)
-                    CityOfAaron.outFile.close();
-                if (input != null) {
+                if (inFile != null) {
+                    inFile.close();
                 }
+
+                if (outFile != null) {
+                    outFile.close();
+                }
+
                 if (logFile != null) {
                     logFile.close();
                 }
-        } catch (IOException ex) {
-            System.out.println("Error closing files");
-            return;
+
+            } catch (IOException ex) {
+                ErrorView.display("CityOfAaron", "Error closing file");
+                return;
+            }
+
         }
 
     }
 
+    public static PrintWriter getlogFile() {
+        ErrorView.display("CityOfAaron", "Error with Log");
+        return null;
+
+    }
 }
