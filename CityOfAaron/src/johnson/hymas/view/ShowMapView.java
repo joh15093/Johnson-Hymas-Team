@@ -38,7 +38,7 @@ public class ShowMapView extends ViewBase {
                 System.out.print(locations[row][col].getMapSymbol());
                 System.out.print(" ");
             }
-            System.out.println();
+            this.console.println();
         }
 
         return false;

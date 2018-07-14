@@ -13,6 +13,7 @@ public class GameMenuView extends ViewBase {
                 + "V - View the Map\n"
                 + "L - Move to a new location\n"
                 + "C - Manage Crops\n"
+                + "S - Save Game\n"
                 + "Y - Live the year\n"
                 + "R - Reports Menu\n"
                 + "M - Return Main Menu";
@@ -44,24 +45,24 @@ public class GameMenuView extends ViewBase {
 
         switch (inputs[0].trim().toUpperCase()) {
             case "V":
-                System.out.println("Loading Map...");
+                this.console.println("Loading Map...");
                 pause(2000);
                 viewMap();
                 pause(2000);
                 break;
             case "L":
-                System.out.println("Packing items for journey...");
+                this.console.println("Packing items for journey...");
                 pause(2000);
                 moveLocation();
                 break;
             case "C":
                 manageCrops();
                 break;
-            case "G" // manageCrops
-                this.saveGame();
+            case "S":
+                saveGame();
                 break;
             case "Y":
-                System.out.println("Living the year...");
+                this.console.println("Living the year...");
                 pause(3000);
                 liveYear();
                 pause(2000);
@@ -71,17 +72,17 @@ public class GameMenuView extends ViewBase {
                 pause(2000);
                 break;
             case "M":
-                System.out.println("Returning to Main Menu. Please wait...");
+                this.console.println("Returning to Main Menu. Please wait...");
                 return false;
             default:
-                System.out.println("Invalid Option: Please select a valid option");
+                this.console.println("Invalid Option: Please select a valid option");
         }
 
         return true;
     }
 
     private void liveYear() {
-        System.out.println("liveYear Function Called and coming soon, returning to Game Menu");
+        this.console.println("liveYear Function Called and coming soon, returning to Game Menu");
     }
 
     private void viewMap() {
@@ -90,17 +91,19 @@ public class GameMenuView extends ViewBase {
     }
 
     private void moveLocation() {
-        System.out.println("MoveLocation Function Called and coming soon, returning to Game Menu");
+        this.console.println("MoveLocation Function Called and coming soon, returning to Game Menu");
     }
 
     private void manageCrops() {
-        System.out.println("manageCrops Function Called and coming soon, returning to Game Menu");
+        this.console.println("manageCrops Function Called and coming soon, returning to Game Menu");
     }
 
     private void showReports() {
-        System.out.println("showReports Function Called and coming soon, returning to Game Menu");
-        
-    private void saveGame() {
-        SaveGameView saveGameView = new SaveGameView();
-        saveGameView.display();
+        this.console.println("showReports Function Called and coming soon, returning to Game Menu");
     }
+
+    private void saveGame() {
+        StartSavedGameView viewSave = new StartSavedGameView();
+        viewSave.displayView();
+    }
+}

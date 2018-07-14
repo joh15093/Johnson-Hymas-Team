@@ -61,14 +61,14 @@ public class ReportsMenuView extends ViewBase {
             case "M":
                 return false;
             default:
-                System.out.println("Invalid Option: Please select a valid option");
+                this.console.println("Invalid Option: Please select a valid option");
         }
 
         return true;
     }
 
     private void showReports() {
-        System.out.println("showReports Function Called and coming soon, returning to Game Menu");
+        this.console.println("showReports Function Called and coming soon, returning to Game Menu");
     }
 
     private void viewAuthors() {

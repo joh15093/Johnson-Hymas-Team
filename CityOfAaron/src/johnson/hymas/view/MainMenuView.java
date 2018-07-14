@@ -17,12 +17,15 @@ public class MainMenuView extends ViewBase {
 
     @Override
     protected String getMessage() {
-        return "Main Menu\n"
-                + "---------\n"
-                + "N - Start a New Game\n"
-                + "L - Load a Saved Game\n"
-                + "H - Help Menu\n"
-                + "Q - Quit\n";
+        return "\n"
+                + "\n----------------------------------------------------------"
+                + "\n| Main Menu                                              |"
+                + "\n----------------------------------------------------------"
+                + "\nN - Start new game"
+                + "\nS - Start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nQ - Quit"
+                + "\n----------------------------------------------------------";
     }
 
     /**
@@ -33,19 +36,7 @@ public class MainMenuView extends ViewBase {
     @Override
     public String[] getInputs() {
         String[] inputs = new String[1];
-        
-        System.out.println(
-                  "\n"
-                + "\n----------------------------------------------------------"
-                + "\n| Main Menu                                              |"
-                + "\n----------------------------------------------------------"
-                + "\nN - Start new game"
-                + "\nS - Start saved game"
-                + "\nH - Get help on how to play the game"
-                + "\nQ - Quit"
-                + "\n----------------------------------------------------------"
-        );
-        
+
         inputs[0] = getUserInput("Your choice:");
 
         return inputs;
@@ -65,9 +56,9 @@ public class MainMenuView extends ViewBase {
             case "N":
                 startNewGame();
                 break;
-            case 'N': // get and start an existing game
-                this.startSavedGame();
-                break;
+//            case 'S': // get and start an existing game
+//                startSavedGame();
+//                break;
             case "L":
                 loadSavedGame();
                 break;
@@ -75,7 +66,7 @@ public class MainMenuView extends ViewBase {
                 helpMenu();
                 break;
             case "Q":
-                System.out.println("Thank you for playing. Good-bye");
+                this.console.println("Thank you for playing. Good-bye");
                 return false;
         }
 
@@ -93,6 +84,6 @@ public class MainMenuView extends ViewBase {
     }
 
     private void loadSavedGame() {
-        System.out.println("*** loadSavedGame() called. Implementation coming soon.");
+        this.console.println("*** loadSavedGame() called. Implementation coming soon.");
     }
 }

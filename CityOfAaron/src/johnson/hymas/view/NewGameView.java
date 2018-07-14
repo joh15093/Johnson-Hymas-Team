@@ -28,7 +28,6 @@ public class NewGameView extends ViewBase {
         // from the user.
         String[] inputs = new String[1];
 
-        pause(2000);
         inputs[0] = getUserInput("Please enter your name or press 'Enter' to return to the Main Menu:", true);
 
         return inputs;
@@ -45,7 +44,7 @@ public class NewGameView extends ViewBase {
     public boolean doAction(String[] inputs) {
 
         if (inputs[0] == null || inputs[0].equals("")) {
-            System.out.println("No player name entered, Returning to the Main Menu...");
+            this.console.println("No player name entered, Returning to the Main Menu...");
             pause(2000);
             return false;
         }
@@ -63,9 +62,8 @@ public class NewGameView extends ViewBase {
         Player player = new Player();
         player.setName(playerName);
         GameControl.createNewGame(player);
-        
 
-        System.out.println("Welcome to the game, " + CityOfAaron.getCurrentGame().getThePlayer().getName() + "!\n");
+        this.console.println("Welcome to the game, " + CityOfAaron.getCurrentGame().getThePlayer().getName() + "!\n");
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayView();
     }

@@ -1,12 +1,20 @@
 package johnson.hymas.view;
 
 import java.util.Scanner;
+import cityofaaron.CityOfAaron;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 /**
  *
  * @author lando
  */
 public abstract class ViewBase implements View {
+
+    private String message;
+
+    protected final BufferedReader keyboard = cityofaaron.CityOfAaron.getInFile();
+    protected final PrintWriter console = CityOfAaron.getOutFile();
 
     /**
      * Constructor
@@ -52,7 +60,7 @@ public abstract class ViewBase implements View {
             // Only print it if it is non-null
             String message = getMessage();
             if (message != null) {
-                System.out.println(getMessage());
+                this.console.println(getMessage());
             }
 
             String[] inputs = getInputs();
@@ -70,25 +78,30 @@ public abstract class ViewBase implements View {
      */
     protected String getUserInput(String prompt, boolean allowEmpty) {
 
-        
         String input = "";
         boolean inputReceived = false;
-        while (inputReceived == false) {
+        try {
 
-            System.out.println(prompt);
-            input = keyboard.nextLine();
+            while (inputReceived == false) {
 
-            // Make sure we aboide null pointer error.
-            if (input == null) {
-                input = "";
+                this.console.println(prompt);
+                input = keyboard.readLine();
+
+                // Make sure we aboide null pointer error.
+                if (input == null) {
+                    input = "";
+                }
+
+                //Trim any trailing whitespace, including carriage return
+                input = input.trim();
+
+                if (input.equals("") == false || allowEmpty == true) {
+                    inputReceived = true;
+                }
             }
+        } catch (Exception e) {
+            ErrorView.display("ViewBase", "Error reading file");
 
-            //Trim any trailing whitespace, including carriage return
-            input = input.trim();
-
-            if (input.equals("") == false || allowEmpty == true) {
-                inputReceived = true;
-            }
         }
         return input;
     }

@@ -6,13 +6,14 @@
 package johnson.hymas.view;
 
 import cityofaaron.CityOfAaron;
+import java.io.PrintWriter;
 
 /**
  *
  * @author joh15
  */
-public class ErrorView {
-    private static PrintWriter console = CityOfAaron.getOutput();
+public class ErrorView{
+    private static PrintWriter console = CityOfAaron.getOutFile();
     private static PrintWriter log = CityOfAaron.getlogFile();
     
     public static void display(String className, String errorMessage) {

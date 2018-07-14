@@ -43,7 +43,7 @@ public class HelpMenuView extends ViewBase {
 
         switch (inputs[0].trim().toUpperCase()) {
             case "G":
-                System.out.println("What are the Goals of the game?\n"
+                this.console.println("What are the Goals of the game?\n"
                         + "------------\n"
                         + "The Goals of the game are as follows:\n"
                         + "1 - Manage Crops in a way that your people are adequately fed.\n"
@@ -51,33 +51,33 @@ public class HelpMenuView extends ViewBase {
                 pause(2000);
                 break;
             case "W":
-                System.out.println("Where is the city of Aaron?\n"
+                this.console.println("Where is the city of Aaron?\n"
                         + "------------\n"
                         + "The City of Aaron is located in the vicinity of Ammonihah, near the cities of Moroni and Nephihah.\n");
                 pause(2000);
                 break;
             case "V":
-                System.out.println("How do I view the map?\n"
+                this.console.println("How do I view the map?\n"
                         + "------------\n"
                         + "The map can be viewed inside the Game Menu.\n");
                 pause(2000);
                 break;
             case "L":
-                System.out.println("How do I move to another location?\n"
+                this.console.println("How do I move to another location?\n"
                         + "------------\n"
                         + "The option to move to a new location can be found inside the Game Menu.\n"
                         + "You will be prompted for coordinates to where you would like to move.\n");
                 pause(2000);
                 break;
             case "D":
-                System.out.println("How do I display a list of animals, provisions, and tools in the city storehouse?\n"
+                this.console.println("How do I display a list of animals, provisions, and tools in the city storehouse?\n"
                         + "------------\n"
                         + "The option to display list of animals, provisions, and tools in the City Storehouse are found in the Game Menu.\n"
                         + "This option will give you the report for the current year.\n");
                 pause(2000);
                 break;
             case "M":
-                System.out.println("Please wait, returning back to Main Menu...\n");
+                this.console.println("Please wait, returning back to Main Menu...\n");
                 pause(2000);
                 return false;
         }
