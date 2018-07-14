@@ -22,7 +22,7 @@ public class MainMenuView extends ViewBase {
                 + "\n| Main Menu                                              |"
                 + "\n----------------------------------------------------------"
                 + "\nN - Start new game"
-                + "\nS - Start saved game"
+                + "\nL - Load saved game"
                 + "\nH - Get help on how to play the game"
                 + "\nQ - Quit"
                 + "\n----------------------------------------------------------";
@@ -56,9 +56,6 @@ public class MainMenuView extends ViewBase {
             case "N":
                 startNewGame();
                 break;
-//            case 'S': // get and start an existing game
-//                startSavedGame();
-//                break;
             case "L":
                 loadSavedGame();
                 break;
@@ -84,6 +81,7 @@ public class MainMenuView extends ViewBase {
     }
 
     private void loadSavedGame() {
-        this.console.println("*** loadSavedGame() called. Implementation coming soon.");
+        LoadGameView viewLoad = new LoadGameView();
+        viewLoad.displayView();
     }
 }

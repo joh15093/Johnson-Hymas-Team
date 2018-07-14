@@ -1,6 +1,9 @@
 package johnson.hymas.view;
 
+import cityofaaron.CityOfAaron;
 import java.util.Scanner;
+import johnson.hymas.control.GameControl;
+import johnson.hymas.model.Game;
 
 /**
  *
@@ -21,19 +24,29 @@ public class LoadGameView extends ViewBase {
     @Override
     public String[] getInputs() {
 
-        // The purpose of this class is to display the description
-        // This class does not get input
-        return null;
+           // Declare the array to have the number of elements you intend to get 
+        // from the user.
+        String[] inputs = new String[1];
+
+        inputs[0] = getUserInput("What is the name of your saved game?");
+
+        return inputs;
     }
 
-    // complex game stuff in our doAction() method. It will get messy very quickly.
     @Override
     public boolean doAction(String[] inputs) {
 
-        // Generally, though, this is where you will call into your Control
-        // classes to do the work of the application.
-        // startMainMenuView();
-        // This will stop this method from being called again
+        String filePath = inputs[0];
+
+        try {
+            GameControl.getGame(filePath);
+        } catch (Exception e) {
+            ErrorView.display("Unable to find file: ", filePath);
+            return true;
+        }
+        this.console.println("Load successfull for " + filePath);
+        GameMenuView view = new GameMenuView();
+        view.displayView();
         return false;
     }
 

@@ -13,6 +13,12 @@ import johnson.hymas.model.Condition;
 import johnson.hymas.model.ItemType;
 import johnson.hymas.model.Location;
 import cityofaaron.CityOfAaron;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import johnson.hymas.view.SaveGameView;
 
 /**
  *
@@ -96,8 +102,36 @@ public class GameControl {
         return locations;
     }
 
-    public static void SaveGame(Game game, String filePath) {
-        System.out.print("saveGame () in GameControl class");
+    public static void saveGame(Game game, String filePath) {
+        if (filePath == null || game == null) {
+            System.out.println("Error Reading File or Game.");
+        }
 
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            out.writeObject(game);
+        } catch (IOException ex) {
+            System.out.println("I/O Error: " + ex.getMessage());
+        }
+    }
+
+    public static Game getGame(String filePath) {
+        if (filePath == null || filePath.length() < 1) {
+            System.out.println("Error reading file in getGame()");
+        }
+        Game game = null;
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
+            game = (Game) in.readObject();
+            CityOfAaron.setCurrentGame(game);
+            game.setThePlayer(game.getThePlayer());
+        } catch (IOException | ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
+        return game;
+    }
+
+    private void saveGame() {
+        SaveGameView saveView = new SaveGameView();
+        saveView.displayView();
     }
 }

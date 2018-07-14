@@ -70,7 +70,7 @@ public class CityOfAaron {
             // open charcter steam files for end user and output
             inFile = new BufferedReader(new InputStreamReader(System.in));
             outFile = new PrintWriter(System.out, true);
-            logFile = new PrintWriter("C:logFile.txt");
+            logFile = new PrintWriter("Documents");
 
             // create StartProgramView and start the program
             StartProgramView StartProgramView = new StartProgramView();

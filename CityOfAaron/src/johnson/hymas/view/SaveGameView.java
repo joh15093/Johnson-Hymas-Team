@@ -5,11 +5,15 @@
  */
 package johnson.hymas.view;
 
+import cityofaaron.CityOfAaron;
+import johnson.hymas.model.Game;
+import johnson.hymas.control.GameControl;
+
 /**
  *
  * @author joh15
  */
-public class StartSavedGameView extends ViewBase {
+public class SaveGameView extends ViewBase {
 
     /**
      * Get the set of inputs from the user.
@@ -23,8 +27,8 @@ public class StartSavedGameView extends ViewBase {
         // from the user.
         String[] inputs = new String[1];
 
-        inputs[0] = getUserInput("Please, enter the name under which"
-                + "you would like to save your game: ", true);
+        inputs[0] = getUserInput("Where would you like to save"
+                + " your game? ");
 
         return inputs;
     }
@@ -39,22 +43,21 @@ public class StartSavedGameView extends ViewBase {
     @Override
     public boolean doAction(String[] inputs) {
 
-        if (inputs[0] == null || inputs[0].equals("")) {
-            this.console.println("E");
-            pause(2000);
-            return false;
+        String filePath = inputs[0];
+        Game game = CityOfAaron.getCurrentGame();
+
+        try {
+            GameControl.saveGame(game, filePath);
+        } catch (Exception e) {
+            ErrorView.display("Error in SaveGame: ", filePath);
+            return true;
         }
-
-        String playerName = inputs[0];
-
-        // False will stop us from looping
+        this.console.println("Save Successful! File saved to " + filePath);
         return false;
     }
 
     @Override
     protected String getMessage() {
-        return "ohBoy!";
-                
+        return null;
     }
-
 }

@@ -103,7 +103,7 @@ public class GameMenuView extends ViewBase {
     }
 
     private void saveGame() {
-        StartSavedGameView viewSave = new StartSavedGameView();
+        SaveGameView viewSave = new SaveGameView();
         viewSave.displayView();
     }
 }
