@@ -4,8 +4,35 @@ package johnson.hymas.view;
  *
  * @author lando
  */
+import java.io.IOException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 public class GameMenuView extends ViewBase {
 
+    private static class report {
+        private String print;
+        private String items;
+        private int numberofItems;
+        
+        public report(String print, String items, int numberofItems){
+            
+        }
+        
+        public String getReport(){String report = null;
+        return report; }
+        public String getItems(){return items; }
+        public int getNumberofItems(){return numberofItems; }
+    }
+    
+    public static void main(String[] args){
+        String filename = "Report.txt";
+        if (args != null && args.length > 1){
+            filename = args[1];
+        }
+        // Set up data
+    }
     @Override
     protected String getMessage() {
         return "Game Menu\n"
